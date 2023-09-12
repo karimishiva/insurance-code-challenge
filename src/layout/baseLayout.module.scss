@@ -1,0 +1,61 @@
+.layoutContainer{
+display: flex;
+padding: 30px;
+background: linear-gradient(90deg, var(--bg-light-pink) 25%, var(--bg-light-pink) 25%, var(--bg-main) 25%);
+flex-direction: column;
+width: 100%;
+height: 100vh;
+
+.layoutContent{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.formDiv{
+padding-right: 55px;
+width: 100%;
+
+}
+.carDiv{
+    display: flex;
+    align-items: end;
+    width: 100%;
+    .carSvg{
+        height: 60%; 
+        width: 100%; 
+    }
+}
+
+.navigation{
+    height: 20%;
+}
+}
+
+@media screen and (max-width: 650px) {
+    .layoutContainer{
+        background: linear-gradient(0deg, var(--bg-light-pink) 25%, var(--bg-light-pink) 25%, var(--bg-main) 25%);
+        padding: 15px;
+        .layoutContent{
+            flex-direction: column;
+            justify-content: space-around;
+            .formDiv{
+                padding-right: 0;
+                }
+            .carDiv{
+                justify-content: end;
+                .carSvg{
+                    width: 70%;
+                    height: 100%;
+                }
+            }
+        }
+        .navigation{
+            height: 8%;
+        }
+    }
+   
+    
+   
+}

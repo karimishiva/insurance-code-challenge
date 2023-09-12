@@ -1,0 +1,42 @@
+.mainBtnStyle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    min-width: 150px;
+    padding:15px 5px;
+    border-radius: 30px;
+    font-weight: var(--font-bold);
+    cursor: pointer;
+    .arrowIcon{
+        width: 10px;
+        height: 10px;
+    }
+    .arrowIconRotate{
+        transform: rotate(180deg);
+    
+    }
+}
+.borderBtnStyle:hover,.filledBtnStyle{
+    background-color: var(--bg-green);
+    border: none;
+    color:var(--text-white);
+   
+}
+.borderBtnStyle,.filledBtnStyle:hover{
+    background: inherit;
+    border: 1px solid var(--bg-green);
+    color:var(--text-green);
+}
+
+.mainBtnStyle:disabled{
+    cursor: auto;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 850px) {
+    .mainBtnStyle{
+        padding:10px 5px;
+    }
+}

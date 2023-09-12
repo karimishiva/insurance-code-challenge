@@ -1,0 +1,56 @@
+
+@import "./font.scss";
+@import "./variables.scss";
+
+html,
+body {
+  direction: rtl;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  margin: 0 auto;
+  min-height: 100vh;
+  font-family: var(--font-default),
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+
+}
+.app{
+  min-block-size: 100vh;
+  width: 100%;
+}
+h1{
+  font-size: var(--text-xLarge);
+}
+h2{
+  font-size: var(--text-Large);
+}
+h3{
+  font-size: var(--text-Large);
+  color:var(--text-grey)
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    box-shadow: 0 0 0 30px white inset !important;
+}
+
+@media screen and (max-width: 850px) {
+  h1{
+    font-size: var(--text-Large);
+  }
+  h2{
+    font-size: var(--text-medium);
+  }
+  h3{
+    font-size: var(--text-medium);
+    color:var(--text-grey)
+  }
+}

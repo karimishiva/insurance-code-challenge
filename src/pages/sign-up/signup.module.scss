@@ -1,0 +1,83 @@
+@mixin flexStyle{
+  display: flex;
+  flex-direction: column;
+}
+.mainContainer{
+    gap: 20px;
+    @include flexStyle;
+}
+.twoColumnGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    .takeTwoColumns {
+      grid-column: span 2;
+      @include flexStyle;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+          margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+    }
+  }
+
+  .requiredInput{
+    @include flexStyle;
+    gap: 8px;
+    span{
+        color: var(--bg-danger);
+        font-size: 12px;
+    }
+    .invalidInput{
+        border: 1px solid var(--bg-danger);
+    }
+    input{
+        padding: 12px 10px;
+        border-radius: 3px;
+        border: 1px solid var(--text-grey);
+        background-color: inherit;
+        font-weight: var(--font-medium);
+    }
+    ::placeholder{
+        color:var(--text-grey)
+    }
+    :focus-visible{
+        outline:none;
+        background-color: inherit;
+    }
+  }
+  .btnContainer{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+  }
+
+
+  @media screen and (max-width: 850px) {
+    .mainContainer{
+        justify-content: center;
+        align-items: center;
+       div{
+        width: 100%;
+       }
+    }
+    .twoColumnGrid{
+      @include flexStyle;
+      input{
+        width: 100%;
+      }
+    }
+    .requiredInput{
+      input{
+        padding: 8px 10px;
+        font-size: var(--text-xSmall);
+      }
+    }
+    .btnContainer{
+      align-items: center;
+    }
+}
