@@ -29,11 +29,11 @@ h1{
   font-size: var(--text-xLarge);
 }
 h2{
-  font-size: var(--text-Large);
+  font-size: var(--text-medium);
 }
 h3{
-  font-size: var(--text-Large);
-  color:var(--text-grey)
+  font-size: var(--text-small);
+  color:var(--text-dark-grey)
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
@@ -44,13 +44,24 @@ input:-webkit-autofill:active{
 
 @media screen and (max-width: 850px) {
   h1{
-    font-size: var(--text-Large);
+    font-size: var(--text-large);
   }
   h2{
     font-size: var(--text-medium);
   }
   h3{
+    font-size: var(--text-xSmall);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  h1{
+    font-size: var(--text-xLarge);
+  }
+  h2{
+    font-size: var(--text-large);
+  }
+  h3{
     font-size: var(--text-medium);
-    color:var(--text-grey)
   }
 }

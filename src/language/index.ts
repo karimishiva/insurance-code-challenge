@@ -19,6 +19,8 @@ export const RegisterLanguageDictionaryFa = {
 
 export const InsuranceLanguageDictionaryFa = {
   selectInsurance: "انتخاب بیمه",
-  thirdPersonInsurance: "شخص ثالث",
+  thirdPerson: "شخص ثالث",
   bodyInsurance: "بدنه",
+  thirdPersonInsurance: "بیمه شخص ثالث",
+  chooseVehicle: "نوع و مدل خودروی خود را انتخاب کنید.",
 };

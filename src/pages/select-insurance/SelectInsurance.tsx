@@ -7,7 +7,7 @@ function SelectInsurance() {
   const navigate = useNavigate();
   const listOfInsurance = [
     {
-      name: InsuranceLanguageDictionaryFa.thirdPersonInsurance,
+      name: InsuranceLanguageDictionaryFa.thirdPerson,
       disabled: false,
       navigate: "/select-vehicle",
       id: 1,
