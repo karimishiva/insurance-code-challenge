@@ -17,4 +17,8 @@ export const RegisterLanguageDictionaryFa = {
   validPasswordLenght: "طول رمز عبور حداقل ۴ و حداکثر ١٠ کاراکتر باشد.",
 };
 
-export const InsuranceLanguageDictionaryFa = {};
+export const InsuranceLanguageDictionaryFa = {
+  selectInsurance: "انتخاب بیمه",
+  thirdPersonInsurance: "شخص ثالث",
+  bodyInsurance: "بدنه",
+};
