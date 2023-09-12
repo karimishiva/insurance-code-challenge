@@ -1,4 +1,5 @@
 import { signupAPI } from "api/services/signupAPI";
+import { RegisterLanguageDictionaryFa } from "language";
 import { useMutation } from "react-query";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -15,14 +16,14 @@ const useSignup = () => {
     localStorage.setItem("lastName", data.lastName);
     dispatch(register(data));
     navigate("/select-insurance");
-    // toast
   };
   const validateMobile = (mobile: string) => {
-    if (mobile.length !== 11) return "شماره موبایل وارد شده صحیح نمیباشد.";
+    if (mobile.length !== 11)
+      return RegisterLanguageDictionaryFa.wrongPhoneNumber;
   };
   const validatePasswordLength = (password: string) => {
     if (password?.length < 4 || password?.length > 10)
-      return "طول رمز عبور حداقل ۴ و حداکثر ١٠ کاراکتر باشد.";
+      return RegisterLanguageDictionaryFa.validPasswordLenght;
   };
 
   return {

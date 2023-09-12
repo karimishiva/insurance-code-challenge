@@ -4,6 +4,7 @@ import { FieldValues, useForm } from "react-hook-form";
 import { userInfo } from "types/types";
 import styles from "./signup.module.scss";
 import clsx from "clsx";
+import { RegisterLanguageDictionaryFa } from "language";
 function SignUp() {
   const {
     register,
@@ -13,7 +14,7 @@ function SignUp() {
   const { onSubmit, validateMobile, validatePasswordLength } = useSignup();
   return (
     <div className={styles.mainContainer}>
-      <h1>ثبت نام</h1>
+      <h1>{RegisterLanguageDictionaryFa.signup}</h1>
       <div>
         <form
           className={styles.twoColumnGrid}
@@ -24,13 +25,13 @@ function SignUp() {
           <label className={styles.requiredInput}>
             <input
               className={errors?.firstName ? styles.invalidInput : ""}
-              placeholder='نام '
+              placeholder={RegisterLanguageDictionaryFa.firstName}
               type='text'
               {...register("firstName", {
-                required: "پر کردن این فیلد ضروری است.",
+                required: RegisterLanguageDictionaryFa.requiredField,
                 pattern: {
                   value: /^[\u0600-\u06FF\s]+$/,
-                  message: "فقط حروف فارسی وارد کنید.",
+                  message: RegisterLanguageDictionaryFa.validChar,
                 },
               })}
               autoFocus
@@ -42,13 +43,13 @@ function SignUp() {
           <label className={styles.requiredInput}>
             <input
               className={errors?.lastName ? styles.invalidInput : ""}
-              placeholder='نام خانوادگی'
+              placeholder={RegisterLanguageDictionaryFa.lastName}
               type='text'
               {...register("lastName", {
-                required: "پر کردن این فیلد ضروری است.",
+                required: RegisterLanguageDictionaryFa.requiredField,
                 pattern: {
                   value: /^[\u0600-\u06FF\s]+$/,
-                  message: "فقط حروف فارسی وارد کنید.",
+                  message: RegisterLanguageDictionaryFa.validChar,
                 },
               })}
             />
@@ -59,10 +60,10 @@ function SignUp() {
           <label className={clsx(styles.takeTwoColumns, styles.requiredInput)}>
             <input
               className={errors?.mobile ? styles.invalidInput : ""}
-              placeholder='شماره موبایل'
+              placeholder={RegisterLanguageDictionaryFa.mobile}
               type='number'
               {...register("mobile", {
-                required: "پر کردن این فیلد ضروری است.",
+                required: RegisterLanguageDictionaryFa.requiredField,
                 validate: validateMobile,
               })}
             />
@@ -71,14 +72,13 @@ function SignUp() {
           <label className={clsx(styles.takeTwoColumns, styles.requiredInput)}>
             <input
               className={errors?.password ? styles.invalidInput : ""}
-              placeholder='رمز عبور'
+              placeholder={RegisterLanguageDictionaryFa.password}
               type='password'
               {...register("password", {
-                required: "پر کردن این فیلد ضروری است.",
+                required: RegisterLanguageDictionaryFa.requiredField,
                 pattern: {
                   value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/,
-                  message:
-                    "رمزعبور باید شامل حداقل یک عدد، یک حرف لاتین بزرگ و یک حرف لاتین کوچک باشد",
+                  message: RegisterLanguageDictionaryFa.validPasswordChar,
                 },
                 validate: validatePasswordLength,
               })}
@@ -88,7 +88,7 @@ function SignUp() {
             )}
           </label>
           <div className={clsx(styles.btnContainer, styles.takeTwoColumns)}>
-            <CustomButton text='ثبت نام' filled />
+            <CustomButton text={RegisterLanguageDictionaryFa.signup} filled />
           </div>
         </form>
       </div>
