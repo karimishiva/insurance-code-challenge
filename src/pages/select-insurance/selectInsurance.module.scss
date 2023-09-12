@@ -1,8 +1,4 @@
-.mainContainer{
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-}
+
 .insurancesContainer{
     display: flex;
     align-items: center;
@@ -33,10 +29,4 @@
     background: var( --bg-grey)  ;
     opacity: 0.5;
     cursor: auto;
-}
-@media screen and (max-width: 850px) {
-    .mainContainer{
-        justify-content: center;
-        align-items: center;
-    }
 }

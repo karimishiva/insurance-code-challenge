@@ -1,5 +1,6 @@
 import Insurance from "components/icons/Insurance";
 import { InsuranceLanguageDictionaryFa } from "language";
+import ContentLayout from "layout/contentLayout/ContentLayout";
 import { useNavigate } from "react-router-dom";
 import styles from "./selectInsurance.module.scss";
 function SelectInsurance() {
@@ -19,8 +20,7 @@ function SelectInsurance() {
     },
   ];
   return (
-    <div className={styles.mainContainer}>
-      <h1>{InsuranceLanguageDictionaryFa.selectInsurance}</h1>
+    <ContentLayout title={InsuranceLanguageDictionaryFa.selectInsurance}>
       <div className={styles.insurancesContainer}>
         {listOfInsurance.map((insurance) => {
           return (
@@ -36,7 +36,7 @@ function SelectInsurance() {
           );
         })}
       </div>
-    </div>
+    </ContentLayout>
   );
 }
 
