@@ -32,9 +32,26 @@ const insuranceSlice = createSlice({
     changeCompany(state: thirdInsuranceStore, action: PayloadAction<string>) {
       state.company = action.payload;
     },
+    changeThirdDiscount(
+      state: thirdInsuranceStore,
+      action: PayloadAction<string>
+    ) {
+      state.discount.insurance = action.payload;
+    },
+    changePersonDiscount(
+      state: thirdInsuranceStore,
+      action: PayloadAction<string>
+    ) {
+      state.discount.person = action.payload;
+    },
   },
 });
 
 export const insuranceReducer = insuranceSlice.reducer;
-export const { changeVehicleType, changeVehicleUsage, changeCompany } =
-  insuranceSlice.actions;
+export const {
+  changeVehicleType,
+  changeVehicleUsage,
+  changeCompany,
+  changeThirdDiscount,
+  changePersonDiscount,
+} = insuranceSlice.actions;

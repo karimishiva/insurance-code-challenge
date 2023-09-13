@@ -20,7 +20,7 @@
 }
 .borderBtnStyle:hover,.filledBtnStyle,.filledBtnStyle:disabled:hover{
     background-color: var(--bg-green);
-    border: none;
+    border:  1px solid var(--bg-green);
     color:var(--text-white);
    
 }

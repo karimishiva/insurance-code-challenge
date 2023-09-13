@@ -15,7 +15,6 @@ const SelectCompany = () => {
     company,
     handleNavigate,
   } = useSelectCompany();
-  console.log("company", company);
   return (
     <ContentLayout
       title={InsuranceLanguageDictionaryFa.thirdPersonInsurance}

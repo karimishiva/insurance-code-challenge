@@ -5,6 +5,8 @@ export const CommonLanguageDictionaryFa = {
   next: "مرحله بعد",
   previous: "مرحله قبل",
   noOption: "در لیست موجود نیست.",
+  price: "استعلام قیمت",
+  close: "بستن",
 };
 
 export const RegisterLanguageDictionaryFa = {
@@ -31,4 +33,7 @@ export const InsuranceLanguageDictionaryFa = {
   vehicleUsage: "مدل خودرو",
   chooseCompany: "شرکت بیمه گر قبلی خود را در این بخش انتخاب کنید.",
   prevCompany: "شرکت بیمه گر قبلی",
+  chooseDiscount: "درصد تخفیف بیمه شخص ثالث و حوادث راننده را وارد کنید.",
+  thirdDiscountPercent: "درصد تخفیف ثالث",
+  personDiscountPercent: "درصد تخفیف حوادث راننده",
 };

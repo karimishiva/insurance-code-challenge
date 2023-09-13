@@ -26,12 +26,13 @@ const AutoCompleteSelect = ({
           variant='rectangular'
           height={56}
           animation='wave'
-          sx={{ borderRadius: "3px" }}
+          sx={{ borderRadius: "3px", width: "100%" }}
         />
       ) : (
         <Autocomplete
           disablePortal
           blurOnSelect={false}
+          className={styles.selector}
           value={value}
           onChange={(event, value: { label: string } | null) => {
             onChangeFn(value?.label || "");
