@@ -10,12 +10,14 @@ type propT = {
   placeholder: string;
   onChangeFn: (value: string) => void;
   isLoading?: boolean;
+  value: { label: string };
 };
 const AutoCompleteSelect = ({
   placeholder,
   list,
   onChangeFn,
   isLoading,
+  value,
 }: propT) => {
   return (
     <>
@@ -29,15 +31,22 @@ const AutoCompleteSelect = ({
       ) : (
         <Autocomplete
           disablePortal
+          blurOnSelect={false}
+          value={value}
           onChange={(event, value: { label: string } | null) => {
             onChangeFn(value?.label || "");
           }}
           options={list}
           renderInput={(params) => (
-            <TextField {...params} label={placeholder} />
+            <TextField
+              {...params}
+              label={placeholder}
+              InputLabelProps={{ className: styles.selectLabel }}
+            />
           )}
           popupIcon={<ArrowSvg className={styles.selectIcon} />}
           noOptionsText={CommonLanguageDictionaryFa.noOption}
+          isOptionEqualToValue={(option, value) => option.label === value.label}
         />
       )}
     </>

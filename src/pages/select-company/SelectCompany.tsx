@@ -8,7 +8,14 @@ import {
 import useSelectCompany from "hooks/useSelectCompany";
 import AutoCompleteSelect from "components/common/autoCompleteSelect/AutoCompleteSelect";
 const SelectCompany = () => {
-  const { companiesList, isFetching } = useSelectCompany();
+  const {
+    companiesList,
+    isFetching,
+    handleSelectCompany,
+    company,
+    handleNavigate,
+  } = useSelectCompany();
+  console.log("company", company);
   return (
     <ContentLayout
       title={InsuranceLanguageDictionaryFa.thirdPersonInsurance}
@@ -17,22 +24,24 @@ const SelectCompany = () => {
       <>
         <div className={styles.selectContainer}>
           <AutoCompleteSelect
-            onChangeFn={(e: string) => console.log("e", e)}
+            onChangeFn={(val: string) => handleSelectCompany(val)}
             isLoading={isFetching}
             list={companiesList}
             placeholder={InsuranceLanguageDictionaryFa.prevCompany}
+            value={{ label: company }}
           />
         </div>
         <div className={styles.btnContainer}>
           <CustomButton
             text={CommonLanguageDictionaryFa.previous}
-            //   onClickFn={() => handleNavigate("/select-insurance")}
+            onClickFn={() => handleNavigate("/select-vehicle")}
             arrowRight
           />
           <CustomButton
             text={CommonLanguageDictionaryFa.next}
-            //   onClickFn={() => handleNavigate("/select-company")}
+            onClickFn={() => handleNavigate("/select-discount")}
             arrowLeft
+            disabled={!company}
           />
         </div>
       </>

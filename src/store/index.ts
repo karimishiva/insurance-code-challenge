@@ -4,6 +4,7 @@ import {
   changeVehicleType,
   changeVehicleUsage,
   insuranceReducer,
+  changeCompany,
 } from "./slices/insuranceSlice";
 export const store = configureStore({
   reducer: {
@@ -11,4 +12,4 @@ export const store = configureStore({
     insurance: insuranceReducer,
   },
 });
-export { register, changeVehicleType, changeVehicleUsage };
+export { register, changeVehicleType, changeVehicleUsage, changeCompany };

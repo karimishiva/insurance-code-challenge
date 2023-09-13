@@ -1,15 +1,23 @@
 import { getCompaniesAPI } from "api/services/insuranceAPI";
 import { useState } from "react";
 import { useQuery } from "react-query";
-import { getCompaniesType } from "types/types";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { changeCompany } from "store";
+import { getCompaniesType, thirdInsuranceStore } from "types/types";
 type selectListType = {
   id: number;
   label: string;
   description?: string;
 }[];
 const useSelectCompany = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const company = useSelector((state: { insurance: thirdInsuranceStore }) => {
+    return state.insurance.company;
+  });
   const [companiesList, setCompaniesList] = useState<selectListType>([]);
-  const { data, isFetching } = useQuery(["/companies"], getCompaniesAPI, {
+  const { isFetching } = useQuery(["/companies"], getCompaniesAPI, {
     onSuccess: (response: getCompaniesType["data"]) => {
       const temp: selectListType = [];
       response?.map((item) => {
@@ -22,9 +30,18 @@ const useSelectCompany = () => {
       setCompaniesList(temp);
     },
   });
+  const handleSelectCompany = (company: string) => {
+    dispatch(changeCompany(company));
+  };
+  const handleNavigate = (route: string) => {
+    navigate(route);
+  };
   return {
     companiesList,
     isFetching,
+    handleSelectCompany,
+    company,
+    handleNavigate,
   };
 };
 

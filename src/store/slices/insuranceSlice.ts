@@ -29,8 +29,12 @@ const insuranceSlice = createSlice({
     ) {
       state.vehicle.usage = action.payload;
     },
+    changeCompany(state: thirdInsuranceStore, action: PayloadAction<string>) {
+      state.company = action.payload;
+    },
   },
 });
 
 export const insuranceReducer = insuranceSlice.reducer;
-export const { changeVehicleType, changeVehicleUsage } = insuranceSlice.actions;
+export const { changeVehicleType, changeVehicleUsage, changeCompany } =
+  insuranceSlice.actions;

@@ -2,4 +2,9 @@
     width: 10px;
     height: 10px;
     transform: rotate(-90deg);
+    color:var(--text-grey)
+}
+.selectLabel{
+    color: var(--text-grey) !important;
+    font-size: var(--text-small) !important
 }
