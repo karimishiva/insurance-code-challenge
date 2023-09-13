@@ -41,6 +41,13 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active{
     box-shadow: 0 0 0 30px var( --bg-main) inset !important;
 }
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border: 1px solid var(--text-grey) !important;
+}
+.muirtl-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
+  font-family: var(--font-default) !important;
+}
+
 
 @media screen and (max-width: 850px) {
   h1{

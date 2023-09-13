@@ -1,6 +1,8 @@
 export const CommonLanguageDictionaryFa = {
   companyTitle: "سامانه مقایسه و خرید آنلاین بیمه",
   signup: "ثبت نام",
+  back: "بازگشت",
+  next: "مرحله بعد",
 };
 
 export const RegisterLanguageDictionaryFa = {
@@ -23,4 +25,6 @@ export const InsuranceLanguageDictionaryFa = {
   bodyInsurance: "بدنه",
   thirdPersonInsurance: "بیمه شخص ثالث",
   chooseVehicle: "نوع و مدل خودروی خود را انتخاب کنید.",
+  vehicleType: "نوع خودرو",
+  vehicleUsage: "مدل خودرو",
 };

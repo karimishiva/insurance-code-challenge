@@ -2,7 +2,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import InputLabel from "@mui/material/InputLabel";
-
+import ArrowSvg from "components/icons/ArrowIcon";
 type propType = {
   value: string | number;
   onChangeFn: (value: string) => void;
@@ -14,6 +14,29 @@ type propType = {
   }[];
 };
 const SelectBox = ({ value, onChangeFn, placeholder, list }: propType) => {
+  const selectBoxStyle = {
+    "& .muirtl-10q54uo-MuiSelect-icon": {
+      width: " 20px",
+      height: "10px",
+      transform: "rotate(90deg)",
+      color: "var(--text-grey)",
+      top: "unset",
+    },
+    "& .muirtl-3qbkez-MuiSelect-icon": {
+      width: " 20px",
+      height: "10px",
+      transform: "rotate(-90deg)",
+      color: "var(--text-grey)",
+      top: "unset",
+    },
+    fontFamily: "var(--font-default)",
+    fontWeight: "var(--font-medium)",
+  };
+  const labelStyle = {
+    color: "var(--text-grey)",
+    fontSize: "var(--text-small)",
+    fontFamily: "var(--font-default)",
+  };
   return (
     <FormControl sx={{ m: 1, minWidth: 120 }}>
       {value === "" ? (
@@ -22,6 +45,7 @@ const SelectBox = ({ value, onChangeFn, placeholder, list }: propType) => {
           shrink={false}
           focused={false}
           id='item_type_label'
+          sx={labelStyle}
         >
           {placeholder}
         </InputLabel>
@@ -32,6 +56,11 @@ const SelectBox = ({ value, onChangeFn, placeholder, list }: propType) => {
         displayEmpty
         inputProps={{ "aria-label": "Without label" }}
         labelId='item_type_label'
+        IconComponent={({ className }) => {
+          className = className.replace("MuiSelect-iconOpen", "");
+          return <ArrowSvg className={className} />;
+        }}
+        sx={selectBoxStyle}
       >
         {list?.map((item) => {
           return (

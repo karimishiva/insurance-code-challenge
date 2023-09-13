@@ -18,13 +18,13 @@
     
     }
 }
-.borderBtnStyle:hover,.filledBtnStyle{
+.borderBtnStyle:hover,.filledBtnStyle,.filledBtnStyle:disabled:hover{
     background-color: var(--bg-green);
     border: none;
     color:var(--text-white);
    
 }
-.borderBtnStyle,.filledBtnStyle:hover{
+.borderBtnStyle,.filledBtnStyle:hover,.borderBtnStyle:disabled:hover{
     background: inherit;
     border: 1px solid var(--bg-green);
     color:var(--text-green);
@@ -38,5 +38,6 @@
 @media screen and (max-width: 850px) {
     .mainBtnStyle{
         padding:10px 5px;
+        min-width: 110px;
     }
 }
