@@ -27,3 +27,11 @@ export type getVehicleType = {
     usages: vehicleUsage;
   }[];
 };
+
+export type getCompaniesType = {
+  data: {
+    title: string;
+    description: string;
+    id: number;
+  }[];
+};

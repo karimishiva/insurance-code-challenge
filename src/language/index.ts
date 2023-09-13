@@ -3,6 +3,8 @@ export const CommonLanguageDictionaryFa = {
   signup: "ثبت نام",
   back: "بازگشت",
   next: "مرحله بعد",
+  previous: "مرحله قبل",
+  noOption: "در لیست موجود نیست.",
 };
 
 export const RegisterLanguageDictionaryFa = {
@@ -27,4 +29,6 @@ export const InsuranceLanguageDictionaryFa = {
   chooseVehicle: "نوع و مدل خودروی خود را انتخاب کنید.",
   vehicleType: "نوع خودرو",
   vehicleUsage: "مدل خودرو",
+  chooseCompany: "شرکت بیمه گر قبلی خود را در این بخش انتخاب کنید.",
+  prevCompany: "شرکت بیمه گر قبلی",
 };

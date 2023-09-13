@@ -1,4 +1,5 @@
 import BaseLayout from "layout/BaseLAyout";
+import SelectCompany from "pages/select-company/SelectCompany";
 import SelectInsurance from "pages/select-insurance/SelectInsurance";
 import SelectVehicle from "pages/select-vehicle/SelectVehicle";
 import SignUp from "pages/sign-up/Signup";
@@ -20,6 +21,10 @@ export const mainRouter = createBrowserRouter([
       {
         element: <SelectVehicle />,
         path: "/select-vehicle",
+      },
+      {
+        element: <SelectCompany />,
+        path: "/select-company",
       },
     ],
   },

@@ -8,7 +8,6 @@ import {
 } from "language";
 import SelectBox from "components/common/selectBox/SelectBox";
 import useSelectVehicle from "hooks/useSelectVehicle";
-import Skeleton from "@mui/material/Skeleton";
 function SelectVehicle() {
   const {
     typeList,
@@ -27,37 +26,20 @@ function SelectVehicle() {
     >
       <>
         <div className={styles.twoColumnGrid}>
-          {isFetching ? (
-            <>
-              <Skeleton
-                variant='rectangular'
-                height={56}
-                animation='wave'
-                sx={{ borderRadius: "3px" }}
-              />
-              <Skeleton
-                variant='rectangular'
-                height={56}
-                animation='wave'
-                sx={{ borderRadius: "3px" }}
-              />
-            </>
-          ) : (
-            <>
-              <SelectBox
-                list={typeList}
-                value={vehicleType}
-                onChangeFn={handleChangeVehicleType}
-                placeholder={InsuranceLanguageDictionaryFa.vehicleType}
-              />
-              <SelectBox
-                list={usageList}
-                value={vehicleUsage}
-                onChangeFn={handleChangeVehicleUsage}
-                placeholder={InsuranceLanguageDictionaryFa.vehicleUsage}
-              />
-            </>
-          )}
+          <SelectBox
+            list={typeList}
+            value={vehicleType}
+            onChangeFn={handleChangeVehicleType}
+            placeholder={InsuranceLanguageDictionaryFa.vehicleType}
+            isLoading={isFetching}
+          />
+          <SelectBox
+            list={usageList}
+            value={vehicleUsage}
+            onChangeFn={handleChangeVehicleUsage}
+            placeholder={InsuranceLanguageDictionaryFa.vehicleUsage}
+            isLoading={isFetching}
+          />
         </div>
         <div className={styles.btnContainer}>
           <CustomButton

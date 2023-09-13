@@ -25,6 +25,9 @@ const cacheRtl = createCache({
 });
 const theme = createTheme({
   direction: "rtl",
+  typography: {
+    fontFamily: "var(--font-default)",
+  },
 });
 root.render(
   <React.StrictMode>
