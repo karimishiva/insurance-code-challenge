@@ -86,6 +86,7 @@ function SignUp() {
                   styles.requiredInput,
                   item.fullColumn && styles.takeTwoColumns
                 )}
+                key={item.name}
               >
                 <input
                   className={item?.error ? styles.invalidInput : ""}

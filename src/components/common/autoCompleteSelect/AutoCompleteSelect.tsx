@@ -10,14 +10,12 @@ type propT = {
   placeholder: string;
   onChangeFn: (value: string) => void;
   isLoading?: boolean;
-  value: { label: string };
 };
 const AutoCompleteSelect = ({
   placeholder,
   list,
   onChangeFn,
   isLoading,
-  value,
 }: propT) => {
   return (
     <>
@@ -33,8 +31,7 @@ const AutoCompleteSelect = ({
           disablePortal
           blurOnSelect={false}
           className={styles.selector}
-          value={value}
-          onChange={(event, value: { label: string } | null) => {
+          onChange={(_, value: { label: string } | null) => {
             onChangeFn(value?.label || "");
           }}
           options={list}
@@ -47,7 +44,9 @@ const AutoCompleteSelect = ({
           )}
           popupIcon={<ArrowSvg className={styles.selectIcon} />}
           noOptionsText={CommonLanguageDictionaryFa.noOption}
-          isOptionEqualToValue={(option, value) => option.label === value.label}
+          isOptionEqualToValue={(option, value) =>
+            option.label === value.label || value === undefined
+          }
         />
       )}
     </>

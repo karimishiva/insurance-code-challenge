@@ -5,13 +5,14 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { register } from "store";
 import { userInfo } from "types/types";
-
+import { toast } from "react-toastify";
 const useSignup = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const registerMutate = useMutation(signupAPI);
   const onSubmit = async (data: userInfo) => {
     await registerMutate.mutateAsync(data);
+    toast.success(RegisterLanguageDictionaryFa.registerSuccessfully);
     localStorage.setItem("firstName", data.firstName);
     localStorage.setItem("lastName", data.lastName);
     dispatch(register(data));

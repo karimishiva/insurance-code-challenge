@@ -7,8 +7,15 @@ export const CommonLanguageDictionaryFa = {
   noOption: "در لیست موجود نیست.",
   price: "استعلام قیمت",
   close: "بستن",
+  thePageWasNotFound: "صفحه مورد نظر یافت نشد.",
+  returnToSelectInsurance: " صفحه انتخاب بیمه",
+  notFound: "۴۰۴",
 };
-
+export const ResponseLanguageDictionaryFa = {
+  yourInternetIsOut: "اتصالتان به اینترنت قطع شده است.",
+  serverError: "خطایی در سرور رخ داده است.",
+  couldNotMakeRequest: "در ارسال درخواست به سرور، خطایی رخ داده است.",
+};
 export const RegisterLanguageDictionaryFa = {
   signup: "ثبت نام",
   firstName: "نام",
@@ -21,6 +28,7 @@ export const RegisterLanguageDictionaryFa = {
     "رمزعبور باید شامل حداقل یک عدد، یک حرف لاتین بزرگ و یک حرف لاتین کوچک باشد",
   wrongPhoneNumber: "شماره موبایل وارد شده صحیح نمیباشد.",
   validPasswordLenght: "طول رمز عبور حداقل ۴ و حداکثر ١٠ کاراکتر باشد.",
+  registerSuccessfully: "ثبت نام با موفقیت انجام شد.",
 };
 
 export const InsuranceLanguageDictionaryFa = {

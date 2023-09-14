@@ -1,1 +1,30 @@
-### `npm run start:server` to run json-server
+# Insurance Code Challenge
+
+This is a project that I developed for the Azki code challenge. It is a React.js application that leverages TypeScript, Redux Toolkit and SASS as its core technologies.
+
+You can see the live demo, which is powered by Vercel, [here].
+
+## Features
+
+- Load a list of companies, vehicles and discounts on the different pages
+- Perform step by step selection of items and display a summary of the selected items at the end
+- Include a skeleton card loading animation until the data is fully loaded
+- Design and implement responsive design using SASS and MUI
+- Implement an error page and a not found message with a link to return to the main page
+
+## Main Technologies
+
+- React.js: https://www.npmjs.com/package/react
+- TypeScript: https://www.npmjs.com/package/typescript
+- Redux Toolkit: https://www.npmjs.com/package/@reduxjs/toolkit
+- SASS: https://www.npmjs.com/package/sass
+
+## Getting Started
+
+To run this project locally, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/karimishiva/insurance-code-challenge`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm start`
+4. Start the fake REST API on port 3005: `npm run start:server`
+5. Open your browser and visit: http://localhost:3000

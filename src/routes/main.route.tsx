@@ -1,3 +1,4 @@
+import NotFound from "components/common/not-found/NotFound";
 import BaseLayout from "layout/BaseLAyout";
 import SelectCompany from "pages/select-company/SelectCompany";
 import SelectDiscount from "pages/select-discount/SelectDiscount";
@@ -9,7 +10,7 @@ import { createBrowserRouter } from "react-router-dom";
 export const mainRouter = createBrowserRouter([
   {
     element: <BaseLayout />,
-    //   errorElement: <NotFound />,
+    errorElement: <NotFound />,
     children: [
       {
         element: <SignUp />,

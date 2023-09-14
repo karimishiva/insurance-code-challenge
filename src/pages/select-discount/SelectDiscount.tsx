@@ -31,14 +31,12 @@ const SelectDiscount = () => {
             isLoading={isFetching}
             list={selectList}
             placeholder={InsuranceLanguageDictionaryFa.thirdDiscountPercent}
-            value={{ label: thirdDiscount }}
           />
           <AutoCompleteSelect
             onChangeFn={(val: string) => handleSelectPersonDiscount(val)}
             isLoading={isFetching}
             list={selectList}
             placeholder={InsuranceLanguageDictionaryFa.personDiscountPercent}
-            value={{ label: personDiscount }}
           />
         </div>
         <div className={styles.btnContainer}>

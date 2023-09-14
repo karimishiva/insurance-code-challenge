@@ -27,7 +27,6 @@ const SelectCompany = () => {
             isLoading={isFetching}
             list={companiesList}
             placeholder={InsuranceLanguageDictionaryFa.prevCompany}
-            value={{ label: company }}
           />
         </div>
         <div className={styles.btnContainer}>

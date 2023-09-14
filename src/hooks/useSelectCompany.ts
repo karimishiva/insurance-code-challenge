@@ -27,6 +27,7 @@ const useSelectCompany = () => {
           description: item.description,
         });
       });
+
       setCompaniesList(temp);
     },
   });
