@@ -14,10 +14,10 @@ You can see the live demo, which is powered by Vercel, [here].
 
 ## Main Technologies
 
-- React.js: https://www.npmjs.com/package/react
-- TypeScript: https://www.npmjs.com/package/typescript
-- Redux Toolkit: https://www.npmjs.com/package/@reduxjs/toolkit
-- SASS: https://www.npmjs.com/package/sass
+- React.js
+- TypeScript
+- Redux Toolkit
+- SASS
 
 ## Getting Started
 
