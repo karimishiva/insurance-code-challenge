@@ -2,7 +2,6 @@
 
 This is a project that I developed for the Azki code challenge. It is a React.js application that leverages TypeScript, Redux Toolkit and SASS as its core technologies.
 
-You can see the live demo, which is powered by Vercel, [here].
 
 ## Features
 
