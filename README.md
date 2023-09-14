@@ -27,4 +27,5 @@ To run this project locally, follow these steps:
 2. Install dependencies: `npm install`
 3. Start the development server: `npm start`
 4. Start the fake REST API on port 3005: `npm run start:server`
-5. Open your browser and visit: http://localhost:3000
+5. To run the development server and the fake REST API concurrently: `npm run start-dev`
+6. Open your browser and visit: http://localhost:3000
